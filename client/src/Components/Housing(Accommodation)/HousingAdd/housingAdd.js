@@ -7,7 +7,7 @@ const HousingAdd = (props) => {
     const [formData, updateFormData] = React.useState({
         name: "",
         hostId: 1,
-        category: "ROOM",
+        category: "Room",
         numRooms: 1
     })
 

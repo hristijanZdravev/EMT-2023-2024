@@ -75,13 +75,13 @@ public class HousingImpl implements HousingService {
     public Optional<Housing> rent(Long housingId) {
         Housing housing = findById(housingId).get();
 
-        if(!housing.getIsRented()) {
+        if(!housing.getIsRented() || housing.getNumRooms()>0) {
             housing.setIsRented(true);
+            housing.setNumRooms(housing.getNumRooms()-1);
             return Optional.of(housingRepository.save(housing));
         }
 
-         throw new BadRequest();
+        throw new NoAvalibleRooms();
     }
-
 
 }

@@ -20,7 +20,7 @@ const HousingTerm = (props) => {
                       >
                     Edit
                 </Link>
-                {props.term.isRented ? (
+                {props.term.isRented && props.term.numRooms <=0 ? (
                     <a className='btn btn-secondary ms-2 disabled' role="button" aria-disabled="true" disabled>Rented</a>
                 ) : (
                     <a title={"Rent"} className="btn btn-success ms-2"

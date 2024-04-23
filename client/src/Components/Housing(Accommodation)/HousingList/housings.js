@@ -14,7 +14,6 @@ class Housings extends Component {
     }
 
     render() {
-console.log(this.props.housings.length)
         const offset = this.state.size * this.state.page;
         const nextPageOffset = offset + this.state.size;
         const pageCount = Math.ceil(this.props.housings.length / this.state.size);
@@ -59,16 +58,6 @@ console.log(this.props.housings.length)
                                activeClassName={"active"}/>
             </div>
         )
-        // return( <div>
-        //     {this.props.housings.map((item) => (
-        //       <div key={item.id}>
-        //         <h2>{item.name}</h2>
-        //         <p>Category: {item.category}</p>
-        //         <p>Host: {item.host.name}</p>
-        //         <p>Number of Rooms: {item.numRooms}</p>
-        //       </div>
-        //     ))}
-        //   </div>);
     }
 
     handlePageClick = (data) => {
@@ -80,7 +69,6 @@ console.log(this.props.housings.length)
     }
 
     getHousingsPage = (offset, nextPageOffset) => {
-        console.log(offset, nextPageOffset)
         return this.props.housings.map((term, index) => {
             return (
                 <HousingTerm  

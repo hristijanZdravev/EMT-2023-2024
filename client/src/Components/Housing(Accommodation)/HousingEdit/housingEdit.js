@@ -19,6 +19,7 @@ const HousingEdit = (props) => {
 
     const onFormSubmit = (e) => {
         e.preventDefault();
+        
         const name = formData.name !== "" ? formData.name : props.housing.name;
         const hostId = formData.hostId !== 0 ? formData.hostId : props.housing.host.id;
         const category = formData.category !== "" ? formData.category : props.housing.category;

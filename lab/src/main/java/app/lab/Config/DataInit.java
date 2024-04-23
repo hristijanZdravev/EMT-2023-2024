@@ -59,7 +59,7 @@ private final CountryRepository countryRepository;
         //Housings
 
         Housing housing1 = new Housing("St.Agatha", HousingCategory.House ,hosts.get((int) (Math.random() * hosts.size())),3,false);
-        Housing housing2 =new Housing("Mike's Apartments", HousingCategory.Flat ,hosts.get((int) (Math.random() * hosts.size())),5,true);
+        Housing housing2 =new Housing("Mike's Apartments", HousingCategory.Flat ,hosts.get((int) (Math.random() * hosts.size())),5,false);
         Housing housing3 = new Housing("DownTheRoad", HousingCategory.Apartment ,hosts.get((int) (Math.random() * hosts.size())),10,false);
         Housing housing4 = new Housing("RogerThat", HousingCategory.Motel ,hosts.get((int) (Math.random() * hosts.size())),2,false);
         Housing housing5 = new Housing("EmilyHome", HousingCategory.Hotel ,hosts.get((int) (Math.random() * hosts.size())),0,true);
